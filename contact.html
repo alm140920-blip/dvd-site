@@ -6,27 +6,25 @@
 <title data-title-ru="Контакты — ДВД Групп" data-title-en="Contact — DVD Group">Контакты — ДВД Групп</title>
 <meta name="description" content="Свяжитесь с ДВД Групп по вопросам поставки арматуры, технических консультаций и партнёрства. Офисы в Москве и Шанхае.">
 <link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&family=Varela&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.add("js")</script>
 </head>
-<body>
+<body id="top">
 
 <header class="site-header">
   <div class="container">
-    <a href="index.html" class="brand">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span>DVD Group<small class="lang-ru">Промышленная арматура</small><small class="lang-en">Industrial valve supply</small></span>
-    </a>
+    <div class="lang-switch lang-switch-desktop">
+      <button type="button" data-lang-btn="ru">Русский</button>
+      <button type="button" data-lang-btn="en">English</button>
+    </div>
     <nav class="main-nav">
-      <a href="index.html"><span class="lang-ru">Главная</span><span class="lang-en">Home</span></a>
       <a href="services.html"><span class="lang-ru">Услуги</span><span class="lang-en">Services</span></a>
       <a href="about.html"><span class="lang-ru">О нас</span><span class="lang-en">About</span></a>
       <a href="contact.html" class="is-active"><span class="lang-ru">Контакты</span><span class="lang-en">Contact</span></a>
     </nav>
-    <div class="lang-switch lang-switch-desktop">
-      <button type="button" data-lang-btn="ru">RU</button>
-      <button type="button" data-lang-btn="en">EN</button>
-    </div>
     <button type="button" class="nav-toggle" aria-label="Menu"><span></span></button>
   </div>
   <div class="mobile-panel">
@@ -34,7 +32,7 @@
     <a href="services.html"><span class="lang-ru">Услуги</span><span class="lang-en">Services</span></a>
     <a href="about.html"><span class="lang-ru">О нас</span><span class="lang-en">About</span></a>
     <a href="contact.html"><span class="lang-ru">Контакты</span><span class="lang-en">Contact</span></a>
-    <div class="lang-switch"><button type="button" data-lang-btn="ru">RU</button><button type="button" data-lang-btn="en">EN</button></div>
+    <div class="lang-switch"><button type="button" data-lang-btn="ru">Русский</button><button type="button" data-lang-btn="en">English</button></div>
   </div>
 </header>
 
@@ -72,7 +70,7 @@
               <input type="tel" id="phone" name="phone">
             </div>
           </div>
-          <div class="field full" style="margin-bottom:16px">
+          <div class="field full">
             <label><span class="lang-ru">Тема обращения</span><span class="lang-en">Subject</span></label>
             <div class="subject-grid">
               <label><input type="checkbox" name="subject" value="Order / Поставка оборудования"><span class="lang-ru">Поставка оборудования</span><span class="lang-en">Equipment order</span></label>
@@ -81,18 +79,23 @@
               <label><input type="checkbox" name="subject" value="Other / Другое"><span class="lang-ru">Другое</span><span class="lang-en">Other</span></label>
             </div>
           </div>
-          <div class="field full" style="margin-bottom:20px">
+          <div class="field full">
             <label for="message"><span class="lang-ru">Сообщение*</span><span class="lang-en">Message*</span></label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+            <textarea id="message" name="message" rows="4" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary"><span class="lang-ru">Отправить заявку</span><span class="lang-en">Send request</span><span class="arrow">↗</span></button>
+          <div style="margin-top:28px">
+            <button type="submit" class="btn-cta filled">
+              <span class="txt-box"><span class="lang-ru">Отправить заявку</span><span class="lang-en">Send request</span></span>
+              <span class="arrow-box"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            </button>
+          </div>
           <div class="form-status" id="form-status"></div>
           <p class="form-note"><span class="lang-ru">Нажимая «Отправить», вы откроете почтовый клиент с готовым письмом на info@dvd-g.ru.</span><span class="lang-en">Clicking send opens your email client with a prefilled message to info@dvd-g.ru.</span></p>
         </form>
       </div>
 
-      <div class="reveal">
-        <div class="office-card" style="margin-bottom:20px">
+      <div class="reveal" style="display:grid;gap:1px;background:var(--border);border:1px solid var(--border)">
+        <div class="office-card">
           <div class="flag"><span class="lang-ru">Россия</span><span class="lang-en">Russia</span></div>
           <h3>DVD Group — <span class="lang-ru">Москва</span><span class="lang-en">Moscow</span></h3>
           <div class="row"><span class="k"><span class="lang-ru">Адрес</span><span class="lang-en">Address</span></span><span><span class="lang-ru">Рублёвское шоссе, 48/1, Москва, Россия</span><span class="lang-en">Rublevskoe highway 48/1, Moscow, Russia</span></span></div>
@@ -112,36 +115,15 @@
 
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span><span>DVD Group</span></a>
-        <p><span class="lang-ru">Оптовая поставка трубопроводной арматуры для промышленности. Москва — Шанхай.</span><span class="lang-en">Wholesale supply of pipeline valves for industry. Moscow — Shanghai.</span></p>
-      </div>
-      <div class="footer-col">
-        <h5><span class="lang-ru">Навигация</span><span class="lang-en">Navigation</span></h5>
-        <ul>
-          <li><a href="services.html"><span class="lang-ru">Услуги</span><span class="lang-en">Services</span></a></li>
-          <li><a href="about.html"><span class="lang-ru">О нас</span><span class="lang-en">About</span></a></li>
-          <li><a href="contact.html"><span class="lang-ru">Контакты</span><span class="lang-en">Contact</span></a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5><span class="lang-ru">Офис в России</span><span class="lang-en">Russia office</span></h5>
-        <ul>
-          <li><span class="lang-ru">Рублёвское шоссе, 48/1, Москва</span><span class="lang-en">Rublevskoe highway 48/1, Moscow</span></li>
-          <li><a href="tel:+74957293040">+7 (495) 729-30-40</a></li>
-          <li><a href="mailto:info@dvd-g.ru">info@dvd-g.ru</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h5><span class="lang-ru">Офис в Китае</span><span class="lang-en">China office</span></h5>
-        <ul>
-          <li><span class="lang-ru">Шанхай, Китай</span><span class="lang-en">Shanghai, China</span></li>
-          <li><a href="mailto:info@dvd-g.ru">info@dvd-g.ru</a></li>
-        </ul>
-      </div>
+    <div class="footer-top" style="border-bottom:none">
+      <a href="#top" class="top-link"><span class="lang-ru">Наверх</span><span class="lang-en">Back to top</span></a>
+      <nav class="footer-nav">
+        <a href="services.html"><span class="lang-ru">Услуги</span><span class="lang-en">Services</span></a>
+        <a href="about.html"><span class="lang-ru">О нас</span><span class="lang-en">About</span></a>
+        <a href="contact.html"><span class="lang-ru">Контакты</span><span class="lang-en">Contact</span></a>
+      </nav>
     </div>
-    <div class="footer-bottom">
+    <div class="footer-bottom" style="border-top:1px solid var(--border)">
       <div>© <span id="year"></span> DVD Group. <span class="lang-ru">Все права защищены.</span><span class="lang-en">All rights reserved.</span></div>
       <div><span class="lang-ru">Оптовая торговля промышленным оборудованием</span><span class="lang-en">Wholesale trade of industrial equipment</span></div>
     </div>
