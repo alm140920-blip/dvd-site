@@ -18,9 +18,7 @@
   function initLang() {
     var saved = null;
     try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
-    var lang = saved || "ru";
-    applyLang(lang);
-
+    applyLang(saved || "ru");
     document.querySelectorAll("[data-lang-btn]").forEach(function (btn) {
       btn.addEventListener("click", function () {
         var lang = btn.getAttribute("data-lang-btn");
@@ -33,9 +31,7 @@
   function initHeaderScroll() {
     var header = document.querySelector(".site-header");
     if (!header) return;
-    var onScroll = function () {
-      header.classList.toggle("is-scrolled", window.scrollY > 12);
-    };
+    var onScroll = function () { header.classList.toggle("is-scrolled", window.scrollY > 12); };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
   }
@@ -59,7 +55,7 @@
   }
 
   function initReveal() {
-    var items = document.querySelectorAll(".reveal");
+    var items = document.querySelectorAll(".reveal, .reveal-img");
     if (!items.length) return;
     if (!("IntersectionObserver" in window)) {
       items.forEach(function (el) { el.classList.add("is-visible"); });
@@ -74,28 +70,27 @@
           }
         });
       },
-      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.12, rootMargin: "0px 0px -60px 0px" }
     );
     items.forEach(function (el) { io.observe(el); });
   }
 
-  function initTilt() {
-    if (window.matchMedia && window.matchMedia("(pointer: coarse)").matches) return;
-    var cards = document.querySelectorAll("[data-tilt]");
-    cards.forEach(function (card) {
-      card.style.transformStyle = "preserve-3d";
-      card.style.perspective = "800px";
-      card.addEventListener("mousemove", function (e) {
-        var r = card.getBoundingClientRect();
-        var x = (e.clientX - r.left) / r.width - 0.5;
-        var y = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transform =
-          "rotateY(" + (x * 6).toFixed(2) + "deg) rotateX(" + (-y * 6).toFixed(2) + "deg) translateY(-2px)";
+  function initParallax() {
+    if (window.matchMedia && (window.matchMedia("(pointer: coarse)").matches || window.matchMedia("(prefers-reduced-motion: reduce)").matches)) return;
+    var layers = document.querySelectorAll(".hero-bg");
+    if (!layers.length) return;
+    var ticking = false;
+    function update() {
+      var y = window.scrollY || 0;
+      layers.forEach(function (el) {
+        var shift = Math.min(y * 0.18, 90);
+        el.style.transform = "translateY(" + shift + "px)";
       });
-      card.addEventListener("mouseleave", function () {
-        card.style.transform = "rotateY(0) rotateX(0) translateY(0)";
-      });
-    });
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { requestAnimationFrame(update); ticking = true; }
+    }, { passive: true });
   }
 
   function initContactForm() {
@@ -109,39 +104,14 @@
       var lang = html.getAttribute("data-lang") || "ru";
 
       var lines = lang === "en"
-        ? [
-            "Name: " + data.get("name"),
-            "Company: " + data.get("company"),
-            "Phone: " + data.get("phone"),
-            "Subject: " + subjects,
-            "",
-            data.get("message")
-          ]
-        : [
-            "Имя: " + data.get("name"),
-            "Компания: " + data.get("company"),
-            "Телефон: " + data.get("phone"),
-            "Тема: " + subjects,
-            "",
-            data.get("message")
-          ];
+        ? ["Name: " + data.get("name"), "Company: " + data.get("company"), "Phone: " + data.get("phone"), "Subject: " + subjects, "", data.get("message")]
+        : ["Имя: " + data.get("name"), "Компания: " + data.get("company"), "Телефон: " + data.get("phone"), "Тема: " + subjects, "", data.get("message")];
 
-      var subjectLine = lang === "en"
-        ? "Website inquiry from " + data.get("company")
-        : "Заявка с сайта от " + data.get("company");
-
-      var mailto =
-        "mailto:info@dvd-g.ru" +
-        "?subject=" + encodeURIComponent(subjectLine) +
-        "&body=" + encodeURIComponent(lines.join("\n")) +
-        (data.get("email") ? "&cc=" : "");
-
-      window.location.href = mailto;
+      var subjectLine = lang === "en" ? "Website inquiry from " + data.get("company") : "Заявка с сайта от " + data.get("company");
+      window.location.href = "mailto:info@dvd-g.ru?subject=" + encodeURIComponent(subjectLine) + "&body=" + encodeURIComponent(lines.join("\n"));
 
       if (status) {
-        status.textContent = lang === "en"
-          ? "Opening your email client to send the request…"
-          : "Открываем почтовый клиент для отправки заявки…";
+        status.textContent = lang === "en" ? "Opening your email client to send the request…" : "Открываем почтовый клиент для отправки заявки…";
       }
     });
   }
@@ -151,7 +121,7 @@
     initHeaderScroll();
     initMobileNav();
     initReveal();
-    initTilt();
+    initParallax();
     initContactForm();
   });
 })();

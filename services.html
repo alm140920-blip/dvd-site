@@ -8,7 +8,7 @@
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&family=Varela&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -16,15 +16,16 @@
 
 <header class="site-header">
   <div class="container">
-    <div class="lang-switch lang-switch-desktop">
-      <button type="button" data-lang-btn="ru">Русский</button>
-      <button type="button" data-lang-btn="en">English</button>
-    </div>
+    <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span><span class="brand-word">DVD Group</span></a>
     <nav class="main-nav">
       <a href="services.html" class="is-active"><span class="lang-ru">Услуги</span><span class="lang-en">Services</span></a>
       <a href="about.html"><span class="lang-ru">О нас</span><span class="lang-en">About</span></a>
       <a href="contact.html"><span class="lang-ru">Контакты</span><span class="lang-en">Contact</span></a>
     </nav>
+    <div class="lang-switch lang-switch-desktop">
+      <button type="button" data-lang-btn="ru">RU</button>
+      <button type="button" data-lang-btn="en">EN</button>
+    </div>
     <button type="button" class="nav-toggle" aria-label="Menu"><span></span></button>
   </div>
   <div class="mobile-panel">
@@ -32,12 +33,12 @@
     <a href="services.html"><span class="lang-ru">Услуги</span><span class="lang-en">Services</span></a>
     <a href="about.html"><span class="lang-ru">О нас</span><span class="lang-en">About</span></a>
     <a href="contact.html"><span class="lang-ru">Контакты</span><span class="lang-en">Contact</span></a>
-    <div class="lang-switch"><button type="button" data-lang-btn="ru">Русский</button><button type="button" data-lang-btn="en">English</button></div>
+    <div class="lang-switch"><button type="button" data-lang-btn="ru">RU</button><button type="button" data-lang-btn="en">EN</button></div>
   </div>
 </header>
 
 <section class="hero hero-sm">
-  <div class="hero-bg" style="background-image:url('images/valve-steel-assembly.png')"></div>
+  <div class="hero-bg-wrap"><div class="hero-bg" style="background-image:url('images/valve-factory-qc.png')"></div></div>
   <div class="container hero-content">
     <div class="eyebrow"><span class="lang-ru">Услуги</span><span class="lang-en">Services</span></div>
     <h1><span class="lang-ru">Полный цикл: подбор, поставка и сопровождение</span><span class="lang-en">Full cycle: selection, supply and support</span></h1>
@@ -48,63 +49,65 @@
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
-      <div>
-        <div class="kicker"><span class="lang-ru">Ассортимент</span><span class="lang-en">Product range</span></div>
-        <h2><span class="lang-ru">Категории арматуры</span><span class="lang-en">Valve categories</span></h2>
+      <div class="top">
+        <div>
+          <div class="eyebrow"><span class="lang-ru">Ассортимент</span><span class="lang-en">Product range</span></div>
+          <h2><span class="lang-ru">Категории арматуры</span><span class="lang-en">Valve categories</span></h2>
+        </div>
+        <p class="lead"><span class="lang-ru">Поставляем со склада в Москве и под заказ с заводов-партнёров в Китае.</span><span class="lang-en">Supplied from our Moscow stock or to order from partner factories in China.</span></p>
       </div>
-      <p><span class="lang-ru">Поставляем со склада в Москве и под заказ с заводов-партнёров в Китае.</span><span class="lang-en">Supplied from our Moscow stock or to order from partner factories in China.</span></p>
     </div>
-    <div class="chip-grid reveal">
-      <div class="chip-card"><div class="n">01</div><h4><span class="lang-ru">Шаровые краны</span><span class="lang-en">Ball valves</span></h4><p><span class="lang-ru">Полнопроходные и стандартнопроходные, DN15–DN1200</span><span class="lang-en">Full-bore and reduced-bore, DN15–DN1200</span></p></div>
-      <div class="chip-card"><div class="n">02</div><h4><span class="lang-ru">Задвижки</span><span class="lang-en">Gate valves</span></h4><p><span class="lang-ru">Клиновые и шиберные, чугун и сталь</span><span class="lang-en">Wedge and knife gate, cast iron and steel</span></p></div>
-      <div class="chip-card"><div class="n">03</div><h4><span class="lang-ru">Дисковые затворы</span><span class="lang-en">Butterfly valves</span></h4><p><span class="lang-ru">Межфланцевые и с проушинами, ручной и электропривод</span><span class="lang-en">Wafer and lug type, manual or electric actuator</span></p></div>
-      <div class="chip-card"><div class="n">04</div><h4><span class="lang-ru">Обратные клапаны</span><span class="lang-en">Check valves</span></h4><p><span class="lang-ru">Поворотные, подъёмные, шаровые</span><span class="lang-en">Swing, lift and ball check types</span></p></div>
-      <div class="chip-card"><div class="n">05</div><h4><span class="lang-ru">Регулирующая арматура</span><span class="lang-en">Control valves</span></h4><p><span class="lang-ru">Клапаны для точного управления потоком и давлением</span><span class="lang-en">Valves for precise flow and pressure control</span></p></div>
-      <div class="chip-card"><div class="n">06</div><h4><span class="lang-ru">Предохранительная арматура</span><span class="lang-en">Safety &amp; relief valves</span></h4><p><span class="lang-ru">Сбросные и предохранительные клапаны</span><span class="lang-en">Relief and safety valves</span></p></div>
-      <div class="chip-card"><div class="n">07</div><h4><span class="lang-ru">Фланцы и крепёж</span><span class="lang-en">Flanges &amp; fasteners</span></h4><p><span class="lang-ru">Ответные фланцы, прокладки, крепёжные комплекты</span><span class="lang-en">Mating flanges, gaskets, fastener kits</span></p></div>
-      <div class="chip-card"><div class="n">08</div><h4><span class="lang-ru">Приводы и автоматика</span><span class="lang-en">Actuators &amp; automation</span></h4><p><span class="lang-ru">Пневмо- и электроприводы, позиционеры</span><span class="lang-en">Pneumatic and electric actuators, positioners</span></p></div>
+    <div class="cat-grid reveal">
+      <div class="cat-col">
+        <div class="cat-row"><div class="left"><span class="n">01</span><span class="name"><span class="lang-ru">Шаровые краны</span><span class="lang-en">Ball valves</span></span></div><div class="spec"><span class="lang-ru">DN15–DN1200</span><span class="lang-en">DN15–DN1200</span></div></div>
+        <div class="cat-row"><div class="left"><span class="n">02</span><span class="name"><span class="lang-ru">Задвижки</span><span class="lang-en">Gate valves</span></span></div><div class="spec"><span class="lang-ru">Чугун и сталь</span><span class="lang-en">Cast iron &amp; steel</span></div></div>
+        <div class="cat-row"><div class="left"><span class="n">03</span><span class="name"><span class="lang-ru">Дисковые затворы</span><span class="lang-en">Butterfly valves</span></span></div><div class="spec"><span class="lang-ru">Ручные и с электроприводом</span><span class="lang-en">Manual &amp; electric actuated</span></div></div>
+        <div class="cat-row"><div class="left"><span class="n">04</span><span class="name"><span class="lang-ru">Обратные клапаны</span><span class="lang-en">Check valves</span></span></div><div class="spec"><span class="lang-ru">Поворотные и подъёмные</span><span class="lang-en">Swing &amp; lift type</span></div></div>
+      </div>
+      <div class="cat-col">
+        <div class="cat-row"><div class="left"><span class="n">05</span><span class="name"><span class="lang-ru">Регулирующая арматура</span><span class="lang-en">Control valves</span></span></div><div class="spec"><span class="lang-ru">Точное управление потоком</span><span class="lang-en">Precise flow control</span></div></div>
+        <div class="cat-row"><div class="left"><span class="n">06</span><span class="name"><span class="lang-ru">Предохранительная арматура</span><span class="lang-en">Safety &amp; relief valves</span></span></div><div class="spec"><span class="lang-ru">Сбросные клапаны</span><span class="lang-en">Relief valves</span></div></div>
+        <div class="cat-row"><div class="left"><span class="n">07</span><span class="name"><span class="lang-ru">Фланцы и крепёж</span><span class="lang-en">Flanges &amp; fasteners</span></span></div><div class="spec"><span class="lang-ru">Прокладки, крепёжные комплекты</span><span class="lang-en">Gaskets, fastener kits</span></div></div>
+        <div class="cat-row"><div class="left"><span class="n">08</span><span class="name"><span class="lang-ru">Приводы и автоматика</span><span class="lang-en">Actuators &amp; automation</span></span></div><div class="spec"><span class="lang-ru">Пневмо- и электроприводы</span><span class="lang-en">Pneumatic &amp; electric</span></div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section surface">
+<section class="section surface hairline-t">
   <div class="container">
     <div class="section-head reveal">
-      <div>
-        <div class="kicker"><span class="lang-ru">Как мы работаем</span><span class="lang-en">How we work</span></div>
-        <h2><span class="lang-ru">Три направления услуг</span><span class="lang-en">Three service pillars</span></h2>
+      <div class="top">
+        <div>
+          <div class="eyebrow"><span class="lang-ru">Как мы работаем</span><span class="lang-en">How we work</span></div>
+          <h2><span class="lang-ru">Три направления услуг</span><span class="lang-en">Three service pillars</span></h2>
+        </div>
       </div>
     </div>
-    <div class="cards-grid reveal">
-      <div class="card">
-        <div class="icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3-7 4 14 3-7h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-        <h3><span class="lang-ru">Поставка арматуры</span><span class="lang-en">Equipment supply</span></h3>
-        <p><span class="lang-ru">Формируем и отгружаем комплектные партии арматуры под проект — со склада или под заказ у завода-партнёра.</span><span class="lang-en">We assemble and ship complete valve batches for your project — from stock or to order from a partner factory.</span></p>
-        <div class="tag-list">
-          <span class="lang-ru">Опт</span><span class="lang-en">Wholesale</span>
-          <span class="lang-ru">Склад в Москве</span><span class="lang-en">Moscow stock</span>
-          <span class="lang-ru">Импорт из Китая</span><span class="lang-en">Import from China</span>
+    <div class="pillars">
+      <div class="pillar reveal">
+        <div>
+          <div class="pillar-num">01</div>
+          <h3><span class="lang-ru">Поставка арматуры</span><span class="lang-en">Equipment supply</span></h3>
+          <p><span class="lang-ru">Формируем и отгружаем комплектные партии арматуры под проект — со склада или под заказ у завода-партнёра.</span><span class="lang-en">We assemble and ship complete valve batches for your project — from stock or to order from a partner factory.</span></p>
         </div>
+        <div class="pillar-media reveal-img"><img src="images/valve-steel-assembly.png" alt="Поставка арматуры"></div>
       </div>
-      <div class="card">
-        <div class="icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l3 3M15 15l3 3M6 18l3-3M15 9l3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <h3><span class="lang-ru">Подбор и инжиниринг</span><span class="lang-en">Technical selection &amp; engineering</span></h3>
-        <p><span class="lang-ru">Помогаем заполнить опросный лист, подбираем модель по среде, давлению, температуре и материалу корпуса.</span><span class="lang-en">We help fill out data sheets and select the right model based on media, pressure, temperature and body material.</span></p>
-        <div class="tag-list">
-          <span class="lang-ru">Опросные листы</span><span class="lang-en">Data sheets</span>
-          <span class="lang-ru">Замена аналогов</span><span class="lang-en">Cross-reference</span>
-          <span class="lang-ru">Расчёт Kv/Cv</span><span class="lang-en">Kv/Cv sizing</span>
+      <div class="pillar reveal">
+        <div>
+          <div class="pillar-num">02</div>
+          <h3><span class="lang-ru">Подбор и инжиниринг</span><span class="lang-en">Technical selection &amp; engineering</span></h3>
+          <p><span class="lang-ru">Помогаем заполнить опросный лист, подбираем модель по среде, давлению, температуре и материалу корпуса.</span><span class="lang-en">We help fill out data sheets and select the right model based on media, pressure, temperature and body material.</span></p>
         </div>
+        <div class="pillar-media reveal-img"><img src="images/precision-component.png" alt="Подбор и инжиниринг"></div>
       </div>
-      <div class="card">
-        <div class="icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
-        <h3><span class="lang-ru">Техподдержка и сервис</span><span class="lang-en">Technical support &amp; repair</span></h3>
-        <p><span class="lang-ru">Консультируем по эксплуатации, подбираем запчасти и сопровождаем гарантийные обращения.</span><span class="lang-en">We advise on operation, source spare parts and handle warranty cases.</span></p>
-        <div class="tag-list">
-          <span class="lang-ru">Гарантия</span><span class="lang-en">Warranty</span>
-          <span class="lang-ru">Запчасти</span><span class="lang-en">Spare parts</span>
-          <span class="lang-ru">Консультации</span><span class="lang-en">Consulting</span>
+      <div class="pillar reveal">
+        <div>
+          <div class="pillar-num">03</div>
+          <h3><span class="lang-ru">Техподдержка и сервис</span><span class="lang-en">Technical support &amp; repair</span></h3>
+          <p><span class="lang-ru">Консультируем по эксплуатации, подбираем запчасти и сопровождаем гарантийные обращения.</span><span class="lang-en">We advise on operation, source spare parts and handle warranty cases.</span></p>
         </div>
+        <div class="pillar-media reveal-img"><img src="images/team-refinery.png" alt="Техподдержка и сервис"></div>
       </div>
     </div>
   </div>
@@ -113,9 +116,11 @@
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
-      <div>
-        <div class="kicker"><span class="lang-ru">Процесс</span><span class="lang-en">Process</span></div>
-        <h2><span class="lang-ru">От заявки до поставки — четыре шага</span><span class="lang-en">From request to delivery — four steps</span></h2>
+      <div class="top">
+        <div>
+          <div class="eyebrow"><span class="lang-ru">Процесс</span><span class="lang-en">Process</span></div>
+          <h2><span class="lang-ru">От заявки до поставки — четыре шага</span><span class="lang-en">From request to delivery — four steps</span></h2>
+        </div>
       </div>
     </div>
     <div class="timeline reveal">

@@ -8,7 +8,7 @@
 <link rel="icon" href="data:,">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Droid+Sans:wght@400;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300;1,400&family=Varela&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <script>document.documentElement.classList.add("js")</script>
 </head>
@@ -16,15 +16,16 @@
 
 <header class="site-header">
   <div class="container">
-    <div class="lang-switch lang-switch-desktop">
-      <button type="button" data-lang-btn="ru">Русский</button>
-      <button type="button" data-lang-btn="en">English</button>
-    </div>
+    <a href="index.html" class="brand"><span class="brand-mark" aria-hidden="true"></span><span class="brand-word">DVD Group</span></a>
     <nav class="main-nav">
       <a href="services.html"><span class="lang-ru">Услуги</span><span class="lang-en">Services</span></a>
       <a href="about.html"><span class="lang-ru">О нас</span><span class="lang-en">About</span></a>
       <a href="contact.html"><span class="lang-ru">Контакты</span><span class="lang-en">Contact</span></a>
     </nav>
+    <div class="lang-switch lang-switch-desktop">
+      <button type="button" data-lang-btn="ru">RU</button>
+      <button type="button" data-lang-btn="en">EN</button>
+    </div>
     <button type="button" class="nav-toggle" aria-label="Menu"><span></span></button>
   </div>
   <div class="mobile-panel">
@@ -32,22 +33,19 @@
     <a href="services.html"><span class="lang-ru">Услуги</span><span class="lang-en">Services</span></a>
     <a href="about.html"><span class="lang-ru">О нас</span><span class="lang-en">About</span></a>
     <a href="contact.html"><span class="lang-ru">Контакты</span><span class="lang-en">Contact</span></a>
-    <div class="lang-switch">
-      <button type="button" data-lang-btn="ru">Русский</button>
-      <button type="button" data-lang-btn="en">English</button>
-    </div>
+    <div class="lang-switch"><button type="button" data-lang-btn="ru">RU</button><button type="button" data-lang-btn="en">EN</button></div>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-bg" style="background-image:url('images/valve-hero-blue.png')"></div>
+  <div class="hero-bg-wrap"><div class="hero-bg" style="background-image:url('images/valve-hero-blue.png')"></div></div>
   <div class="valve-mark" aria-hidden="true">
     <svg viewBox="0 0 200 200" fill="none">
-      <circle cx="100" cy="100" r="86" stroke="#3d97ff" stroke-width="1" stroke-dasharray="2 6"/>
-      <circle cx="100" cy="100" r="64" stroke="#3d97ff" stroke-width="1" opacity="0.6"/>
+      <circle cx="100" cy="100" r="86" stroke="#5b9dff" stroke-width="1" stroke-dasharray="2 6"/>
+      <circle cx="100" cy="100" r="64" stroke="#5b9dff" stroke-width="1" opacity="0.6"/>
       <g class="hub">
-        <circle cx="100" cy="100" r="16" stroke="#e6e6e6" stroke-width="2"/>
-        <path d="M100 40v22M100 138v22M40 100h22M138 100h22M58 58l16 16M126 126l16 16M58 142l16-16M126 74l16-16" stroke="#e6e6e6" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="100" cy="100" r="16" stroke="#eef2f9" stroke-width="2"/>
+        <path d="M100 40v22M100 138v22M40 100h22M138 100h22M58 58l16 16M126 126l16 16M58 142l16-16M126 74l16-16" stroke="#eef2f9" stroke-width="2" stroke-linecap="round"/>
       </g>
     </svg>
   </div>
@@ -58,8 +56,8 @@
       <span class="lang-en">Pipeline valves for industrial facilities</span>
     </h1>
     <p class="lead">
-      <span class="lang-ru">ДВД Групп поставляет запорную, регулирующую и предохранительную арматуру всех видов — от подбора по техническому заданию до отгрузки на объект. Собственный офис в Москве и прямые контракты с заводами в Шанхае.</span>
-      <span class="lang-en">DVD Group supplies shut-off, control and safety pipeline valves of every type — from technical selection to delivery on site. Our own office in Moscow and direct contracts with manufacturers in Shanghai.</span>
+      <span class="lang-ru">Поставляем запорную, регулирующую и предохранительную арматуру всех видов — от подбора по техническому заданию до отгрузки на объект.</span>
+      <span class="lang-en">We supply shut-off, control and safety pipeline valves of every type — from technical selection to delivery on site.</span>
     </p>
     <div class="btn-row">
       <a href="services.html" class="btn-cta filled">
@@ -75,7 +73,7 @@
   <div class="hero-scroll-cue"><div class="scroll-line"></div><span class="lang-ru">Листайте</span><span class="lang-en">Scroll</span></div>
 </section>
 
-<section class="section-tight">
+<section class="section-sm hairline-b">
   <div class="container">
     <div class="stats-row reveal">
       <div class="stat"><div class="v">2</div><div class="l"><span class="lang-ru">офиса — Москва и Шанхай</span><span class="lang-en">offices — Moscow &amp; Shanghai</span></div></div>
@@ -88,22 +86,22 @@
 
 <section class="section">
   <div class="container">
-    <div class="about-points-wrap reveal">
-      <div class="about-points-media"><img src="images/valve-moody-blue.png" alt="Промышленная запорная арматура"></div>
-      <div>
-        <div class="kicker"><span class="lang-ru">Почему ДВД Групп</span><span class="lang-en">Why DVD Group</span></div>
-        <h2 style="margin-bottom:28px"><span class="lang-ru">Три принципа, на которых строится каждая поставка</span><span class="lang-en">Three principles behind every supply we make</span></h2>
+    <div class="about-points-wrap">
+      <div class="about-points-media reveal-img"><img src="images/precision-component.png" alt="Промышленный узел оборудования"></div>
+      <div class="reveal">
+        <div class="eyebrow"><span class="lang-ru">Почему ДВД Групп</span><span class="lang-en">Why DVD Group</span></div>
+        <h2 style="margin-bottom:32px"><span class="lang-ru">Три принципа, на которых строится каждая поставка</span><span class="lang-en">Three principles behind every supply we make</span></h2>
         <div class="about-points-list">
           <div class="point-row">
-            <div class="point-number">01.</div>
+            <div class="point-number">01</div>
             <div><h3><span class="lang-ru">Прямые поставки</span><span class="lang-en">Direct sourcing</span></h3><p><span class="lang-ru">Работаем напрямую с заводами-изготовителями в Китае и держим склад в Москве — без лишних посредников и наценок.</span><span class="lang-en">We work directly with manufacturers in China and hold stock in Moscow — no unnecessary intermediaries or markups.</span></p></div>
           </div>
           <div class="point-row">
-            <div class="point-number">02.</div>
+            <div class="point-number">02</div>
             <div><h3><span class="lang-ru">Индивидуальный подбор</span><span class="lang-en">Application-focused selection</span></h3><p><span class="lang-ru">Каждое решение подбирается под параметры среды, давление, температуру и требования конкретного объекта.</span><span class="lang-en">Every solution is selected around the media, pressure, temperature and requirements of your specific facility.</span></p></div>
           </div>
           <div class="point-row">
-            <div class="point-number">03.</div>
+            <div class="point-number">03</div>
             <div><h3><span class="lang-ru">Инженерная поддержка</span><span class="lang-en">Engineering-driven support</span></h3><p><span class="lang-ru">Технические консультации, документация и сопровождение поставки на всех этапах — от заявки до монтажа.</span><span class="lang-en">Technical consultation, documentation and support at every stage — from request to installation.</span></p></div>
           </div>
         </div>
@@ -112,42 +110,32 @@
   </div>
 </section>
 
-<section class="section surface">
+<section class="section surface hairline-t">
   <div class="container">
     <div class="section-head reveal">
-      <div>
-        <div class="kicker"><span class="lang-ru">Что мы поставляем</span><span class="lang-en">What we supply</span></div>
-        <h2><span class="lang-ru">Услуги для промышленных предприятий</span><span class="lang-en">Services for industrial enterprises</span></h2>
-      </div>
-      <p><span class="lang-ru">От подбора конкретной модели до сервисного сопровождения после монтажа.</span><span class="lang-en">From selecting the exact model to service support after installation.</span></p>
-    </div>
-    <div class="cards-grid reveal">
-      <div class="card">
-        <div class="icon" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 12h4l3-7 4 14 3-7h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="top">
+        <div>
+          <div class="eyebrow"><span class="lang-ru">Что мы поставляем</span><span class="lang-en">What we supply</span></div>
+          <h2><span class="lang-ru">Услуги для промышленных предприятий</span><span class="lang-en">Services for industrial enterprises</span></h2>
         </div>
-        <h3><span class="lang-ru">Поставка арматуры</span><span class="lang-en">Equipment supply</span></h3>
-        <p><span class="lang-ru">Оптовые поставки шаровых кранов, задвижек, затворов, клапанов и фланцевых соединений под заказ и со склада.</span><span class="lang-en">Wholesale supply of ball valves, gate valves, butterfly valves, check valves and flanges — to order or from stock.</span></p>
-      </div>
-      <div class="card">
-        <div class="icon" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l3 3M15 15l3 3M6 18l3-3M15 9l3-3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </div>
-        <h3><span class="lang-ru">Подбор и инжиниринг</span><span class="lang-en">Technical selection &amp; engineering</span></h3>
-        <p><span class="lang-ru">Подбираем арматуру по параметрам технологического процесса и готовим опросные листы совместно с заказчиком.</span><span class="lang-en">We select equipment based on your process parameters and prepare data sheets together with the customer.</span></p>
-      </div>
-      <div class="card">
-        <div class="icon" aria-hidden="true">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><path d="M12 8v4l3 2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-        </div>
-        <h3><span class="lang-ru">Техподдержка и сервис</span><span class="lang-en">Technical support &amp; service</span></h3>
-        <p><span class="lang-ru">Консультации, гарантийное сопровождение и помощь в подборе запасных частей на протяжении всего срока эксплуатации.</span><span class="lang-en">Consultation, warranty support and help sourcing spare parts throughout the equipment's operating life.</span></p>
+        <p class="lead"><span class="lang-ru">От подбора конкретной модели до сервисного сопровождения после монтажа.</span><span class="lang-en">From selecting the exact model to service support after installation.</span></p>
       </div>
     </div>
-    <div class="btn-row" style="margin-top:40px">
-      <a href="services.html" class="btn-cta">
-        <span class="txt-box"><span class="lang-ru">Все услуги</span><span class="lang-en">All services</span></span>
-        <span class="arrow-box"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    <div class="idx-list reveal">
+      <a href="services.html" class="idx-row">
+        <div class="n">01</div>
+        <div class="body"><h3><span class="lang-ru">Поставка арматуры</span><span class="lang-en">Equipment supply</span></h3><p><span class="lang-ru">Оптовые поставки шаровых кранов, задвижек, затворов, клапанов и фланцевых соединений под заказ и со склада.</span><span class="lang-en">Wholesale supply of ball valves, gate valves, butterfly valves, check valves and flanges — to order or from stock.</span></p></div>
+        <div class="go"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </a>
+      <a href="services.html" class="idx-row">
+        <div class="n">02</div>
+        <div class="body"><h3><span class="lang-ru">Подбор и инжиниринг</span><span class="lang-en">Technical selection &amp; engineering</span></h3><p><span class="lang-ru">Подбираем арматуру по параметрам технологического процесса и готовим опросные листы совместно с заказчиком.</span><span class="lang-en">We select equipment based on your process parameters and prepare data sheets together with the customer.</span></p></div>
+        <div class="go"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      </a>
+      <a href="services.html" class="idx-row">
+        <div class="n">03</div>
+        <div class="body"><h3><span class="lang-ru">Техподдержка и сервис</span><span class="lang-en">Technical support &amp; service</span></h3><p><span class="lang-ru">Консультации, гарантийное сопровождение и помощь в подборе запасных частей на протяжении всего срока эксплуатации.</span><span class="lang-en">Consultation, warranty support and help sourcing spare parts throughout the equipment's operating life.</span></p></div>
+        <div class="go"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
       </a>
     </div>
   </div>
@@ -155,12 +143,12 @@
 
 <section class="section">
   <div class="container">
-    <div class="split reveal">
-      <div class="split-media"><img src="images/valve-steel-assembly.png" alt="Промышленная трубопроводная арматура"></div>
-      <div>
-        <div class="kicker"><span class="lang-ru">Ассортимент</span><span class="lang-en">Product range</span></div>
+    <div class="split text-first">
+      <div class="split-media reveal-img"><img src="images/valve-steel-assembly.png" alt="Промышленная трубопроводная арматура"></div>
+      <div class="reveal">
+        <div class="eyebrow"><span class="lang-ru">Ассортимент</span><span class="lang-en">Product range</span></div>
         <h2><span class="lang-ru">Запорная арматура всех видов на одном складе</span><span class="lang-en">Every type of shut-off valve, one supplier</span></h2>
-        <p><span class="lang-ru">Формируем комплектные поставки под проект: от небольшого узла учёта до трубопроводов крупного производства.</span><span class="lang-en">We put together complete project deliveries — from a small metering unit to pipelines for large-scale production.</span></p>
+        <p class="lead"><span class="lang-ru">Формируем комплектные поставки под проект: от небольшого узла учёта до трубопроводов крупного производства.</span><span class="lang-en">We put together complete project deliveries — from a small metering unit to pipelines for large-scale production.</span></p>
         <ul class="check-list">
           <li><span class="lang-ru">Шаровые краны и задвижки</span><span class="lang-en">Ball valves and gate valves</span></li>
           <li><span class="lang-ru">Дисковые затворы и обратные клапаны</span><span class="lang-en">Butterfly valves and check valves</span></li>
@@ -168,9 +156,9 @@
           <li><span class="lang-ru">Фланцы, крепёж и приводы</span><span class="lang-en">Flanges, fasteners and actuators</span></li>
         </ul>
         <div class="btn-row" style="margin-top:32px">
-          <a href="services.html" class="btn-cta">
-            <span class="txt-box"><span class="lang-ru">Смотреть категории</span><span class="lang-en">Browse categories</span></span>
-            <span class="arrow-box"><svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          <a href="services.html" class="link-arrow">
+            <span class="lang-ru">Смотреть все категории</span><span class="lang-en">Browse all categories</span>
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
       </div>
@@ -178,20 +166,31 @@
   </div>
 </section>
 
-<section class="section surface">
+<section class="section surface hairline-t">
   <div class="container">
     <div class="section-head reveal">
-      <div>
-        <div class="kicker"><span class="lang-ru">Отрасли</span><span class="lang-en">Industries</span></div>
-        <h2><span class="lang-ru">С кем мы работаем</span><span class="lang-en">Who we work with</span></h2>
+      <div class="top">
+        <div>
+          <div class="eyebrow"><span class="lang-ru">Отрасли</span><span class="lang-en">Industries</span></div>
+          <h2><span class="lang-ru">С кем мы работаем</span><span class="lang-en">Who we work with</span></h2>
+        </div>
       </div>
     </div>
-    <div class="industry-strip reveal">
-      <div class="industry-tile"><img src="images/industry-refinery-towers.png" alt="Нефтепереработка"><span class="lang-ru">Нефтепереработка</span><span class="lang-en">Oil refining</span></div>
-      <div class="industry-tile"><img src="images/industry-oil-pump.png" alt="Нефтехимия"><span class="lang-ru">Нефтехимия</span><span class="lang-en">Petrochemicals</span></div>
-      <div class="industry-tile"><img src="images/industry-rolling-mill.png" alt="Металлургия"><span class="lang-ru">Металлургия</span><span class="lang-en">Metallurgy</span></div>
-      <div class="industry-tile"><img src="images/industry-steel-coils.png" alt="Энергетика"><span class="lang-ru">Энергетика</span><span class="lang-en">Energy</span></div>
-      <div class="industry-tile"><img src="images/industry-storage-tank.png" alt="Водоснабжение и ЖКХ"><span class="lang-ru">Водоснабжение и ЖКХ</span><span class="lang-en">Water &amp; utilities</span></div>
+    <div class="industries-wrap reveal-img">
+      <div class="industry-tile tall">
+        <img src="images/industry-refinery-towers.png" alt="Нефтепереработка">
+        <div class="cap"><span class="n"><span class="lang-ru">01 — Нефтепереработка</span><span class="lang-en">01 — Oil refining</span></span><h3><span class="lang-ru">Нефтеперерабатывающие заводы</span><span class="lang-en">Oil refineries</span></h3></div>
+      </div>
+      <div class="industries-side">
+        <div class="industry-tile">
+          <img src="images/industry-oil-pump.png" alt="Нефтехимия">
+          <div class="cap"><span class="n"><span class="lang-ru">02 — Нефтехимия</span><span class="lang-en">02 — Petrochemicals</span></span><h3><span class="lang-ru">Добыча и нефтехимия</span><span class="lang-en">Extraction &amp; petrochemicals</span></h3></div>
+        </div>
+        <div class="industry-tile">
+          <img src="images/industry-rolling-mill.png" alt="Металлургия и энергетика">
+          <div class="cap"><span class="n"><span class="lang-ru">03 — Металлургия</span><span class="lang-en">03 — Metallurgy</span></span><h3><span class="lang-ru">Металлургия и энергетика</span><span class="lang-en">Metallurgy &amp; energy</span></h3></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -199,8 +198,8 @@
 <section class="manifesto">
   <div class="container">
     <blockquote class="reveal">
-      <span class="lang-ru">Наша цель — чтобы нужная арматура оказалась на объекте вовремя, с нужными параметрами и без лишних звеньев в <span class="accent">цепочке поставки</span>.</span>
-      <span class="lang-en">Our goal is simple: the right valve, on site, on time — with the right parameters and no <span class="accent">unnecessary links</span> in the supply chain.</span>
+      <span class="lang-ru">Наша цель — чтобы нужная арматура оказалась на объекте вовремя, с нужными параметрами и без <span class="accent">лишних звеньев</span> в цепочке поставки.</span>
+      <span class="lang-en">Our goal is simple: the right valve, on site, on time — with the right parameters and <span class="accent">no unnecessary links</span> in the supply chain.</span>
     </blockquote>
   </div>
 </section>
